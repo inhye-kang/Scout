@@ -3,12 +3,16 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const { Configuration, PlaidApi, PlaidEnvironments } = require('plaid');
 
+var myID = config.MY_ID;
+ 
+var mySecret = config.MY_SECRET;
+
 const configuration = new Configuration({
   basePath: PlaidEnvironments.sandbox,
   baseOptions: {
     headers: {
-      'PLAID-CLIENT-ID': '650de179e40959001b30590c',
-      'PLAID-SECRET': '1eeb4e745ef5bdd588c134023c1ffa',
+      'PLAID-CLIENT-ID': myID,
+      'PLAID-SECRET': mySecret,
     },
   },
 });
